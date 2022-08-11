@@ -8,6 +8,7 @@ function Main() {
 
     useEffect(() => {
         const socket = io.connect(process.env.REACT_APP_API_URL);
+        // const socket = io.connect();
         socket.emit("start");
         let leaderBoard = [];
         socket.on("ticker", function (response) {

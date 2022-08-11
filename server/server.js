@@ -1,11 +1,14 @@
 'use strict';
+require('dotenv').config()
 const express = require('express');
 const http = require('http');
+const path = require('path')
 const io = require('socket.io');
 const cors = require('cors');
 
 const INTERVAL = 1000;
-const PORT = 3002;
+const PORT = process.env.PORT || 80;
+console.log("🚀 ~ file: server.js ~ line 11 ~ process.env.PORT", process.env.PORT)
 
 const horses = [
   {
@@ -70,6 +73,7 @@ function trackTickers(socket) {
 }
 
 const app = express();
+// app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors());
 const server = http.createServer(app);
 
@@ -82,6 +86,10 @@ const socketServer = io(server, {
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 socketServer.on('connection', (socket) => {
   socket.on('start', () => {
