@@ -1,4 +1,3 @@
-# Front-End Developer test task
 We want you to implement a small web app which can display horse betting status.
 
 Information about distance run by horse is available from a locally running server.
@@ -18,13 +17,6 @@ You should use following stack:
 - any UI library you want, or you can use just pure CSS
 - Testing Library
 
-We will assess by following criteria:
-- How you application works
-- Project structure, files and folders organization
-- Code quality, readability, etc.
-- React knowledge
-- Clean and understandable git history
-
 ### How to run the server
 ```cd server && npm install && npm run start```
 You can visit [http://localhost:3002](http://localhost:3002) to check that the service is working correctly and inspect the data it produces.
@@ -33,16 +25,5 @@ You can visit [http://localhost:3002](http://localhost:3002) to check that the s
 ```cd client && npm install && npm run start```
 You can visit [http://localhost:3000](http://localhost:3000) to check that web app is working correctly.
 
-### How to run tests
-```cd client && npm run test```
-
-## How to complete the task
-1. Clone this repository
-2. Update code in `client` folder
-3. Share with us link to the repository
-4. Send us link to your repository
-5. Will be a plus if hosted also on Heroku
-
-Good luck!
 
 ![Horses](https://raw.githubusercontent.com/zakhar-bozhok-jito/jun-frontend-test-task/main/horses.gif)
